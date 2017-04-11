@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vuetify</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css"></link>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <v-app top-navbar left-sidebar>
+      <header>
+        <v-toolbar>
+          <v-toolbar-logo>Vuetify</v-toolbar-logo>
+          <v-toolbar-items>
+            <v-toolbar-item>
+
+            </v-toolbar-item>
+          </v-toolbar-items>
+        </v-toolbar>
+      </header>
+      <main>
+        <v-content>
+          <v-container fluid="fluid">
+              <v-row>
+                <v-col xs12>
+                  <v-card class="primary">
+                    <v-card-text>12</v-card-text>
+                  </v-card>
+                </v-col>
+                <v-col xs6 v-for="i in 2" :key="i">
+                  <v-card class="secondary">
+                    <v-card-text>6</v-card-text>
+                  </v-card>
+                </v-col>
+                <v-col xs4 v-for="i in 3" :key="i">
+                  <v-card class="primary">
+                    <v-card-text>4</v-card-text>
+                  </v-card>
+                </v-col>
+                <v-col xs3 v-for="i in 4" :key="i">
+                  <v-card class="secondary">
+                    <v-card-text>3</v-card-text>
+                  </v-card>
+                </v-col>
+                <v-col xs2 v-for="i in 6" :key="i">
+                  <v-card class="primary">
+                    <v-card-text>2</v-card-text>
+                  </v-card>
+                </v-col>
+                <v-col sm v-for="i in 12" :key="12">
+                  <v-card class="secondary">
+                    <v-card-text>1</v-card-text>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
+        </v-content>
+      </main>
+    </v-app>
+  </div>
+
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex/dist/vuex.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+
+      data: {
+        item: {
+          text: 'Get Started'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
